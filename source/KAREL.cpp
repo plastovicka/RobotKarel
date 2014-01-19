@@ -604,53 +604,53 @@ void konec()
 
 void helpeditor() //only for DOS, because Windows version has configurable keys
 {
-	char *s = formatStr(lng(519, "\
-															 Ctrl+Y, Ctrl+Q+Y       - delete line or end of line\n\
-															 Ctrl+T, Ctrl+Backspace - delete word forward or backward\n\
-															 Ctrl+Ins, Shift+Ins, Shift+Del - copy, paste, cut\n\
-															 \n\
-															 Ctrl+PageUp, Ctrl+PageDown - go to begin or end of page\n\
-															 Ctrl+Home,   Ctrl+End      - go to begin or end of text\n\
-															 Ctrl+left,   Ctrl+right    - go to previous or next word\n\
-															 Ctrl+up,     Ctrl+down     - scroll screen\n\
-															 Ctrl+Enter  - go to beginning of next line\n\
-															 \n\
-															 Shift+Enter - insert keyword %\n\
-															 Ctrl+N      - insert new line\n\
-															 Ctrl+P      - insert control character\n\
-															 Ctrl+K+0-9  - set bookmark\n\
-															 Ctrl+Q+0-9  - go to bookmark\n\
-															 Ctrl+K+I    - indent selected block\n\
-															 Ctrl+K+U    - unindent selected block\n\
-															 Ctrl+K+A    - change upper/lower case in selected block\
-															 "), KONEC);
+	char *s = formatStr(lng(519,
+"Ctrl+Y, Ctrl+Q+Y       - delete line or end of line\n"
+"Ctrl+T, Ctrl+Backspace - delete word forward or backward\n"
+"Ctrl+Ins, Shift+Ins, Shift+Del - copy, paste, cut\n"
+"\n"
+"Ctrl+PageUp, Ctrl+PageDown - go to begin or end of page\n"
+"Ctrl+Home,   Ctrl+End      - go to begin or end of text\n"
+"Ctrl+left,   Ctrl+right    - go to previous or next word\n"
+"Ctrl+up,     Ctrl+down     - scroll screen\n"
+"Ctrl+Enter  - go to beginning of next line\n"
+"\n"
+"Shift+Enter - insert keyword %\n"
+"Ctrl+N      - insert new line\n"
+"Ctrl+P      - insert control character\n"
+"Ctrl+K+0-9  - set bookmark\n"
+"Ctrl+Q+0-9  - go to bookmark\n"
+"Ctrl+K+I    - indent selected block\n"
+"Ctrl+K+U    - unindent selected block\n"
+"Ctrl+K+A    - change upper/lower case in selected block"
+), KONEC);
 	oknotxt(lng(30, "Help"), s, 63, 24);
 	delete[] s;
 }
 
 void helpprik2()
 {
-	char *s = formatStr(lng(520, "\
-															 % | % | % name (parameter1, &parameter2)\n\
-															 \n\
-															  %  variable, variable=value, array[], array[size]\n\
-																\n\
-																 % condition\n\
-																    stataments1;  %;  stataments2\n\
-																		 %\n\
-																		 \n\
-																		  % condition  |  %  |  % count\n\
-																			   stataments\n\
-																				  %  |  % condition\n\
-																					\n\
-																					 % expr\n\
-																					   % expr1,expr2;  stataments1\n\
-																						   % expr3;  stataments2\n\
-																							   %;  stataments\n\
-																								  %\n\
-																									\n\
-																									%\n\
-																									"), PROCEDURE, PODMINKA, FUNKCE, CISLO, KDYZ, JINAK, KONEC,
+	char *s = formatStr(lng(520,
+"% | % | % name (parameter1, &parameter2)\n"
+"\n"
+" %  variable, variable=value, array[], array[size]\n"
+"\n"
+" % condition\n"
+"   stataments1;  %;  stataments2\n"
+" %\n"
+"\n"
+" % condition  |  %  |  % count\n"
+"   stataments\n"
+" %  |  % condition\n"
+"\n"
+" % expr\n"
+"  % expr1,expr2;  stataments1\n"
+"  % expr3;  stataments2\n"
+"  %;  stataments\n"
+" %\n"
+"\n"
+"%\n"
+), PROCEDURE, PODMINKA, FUNKCE, CISLO, KDYZ, JINAK, KONEC,
 DOKUD, OPAKUJ, OPAKUJ, KONEC, AZ, ZVOLIT, PRIPAD, PRIPAD, JINAK, KONEC, KONEC);
 
 	oknotxt(lng(30, "Help"), s, 68, 24);
@@ -659,21 +659,21 @@ DOKUD, OPAKUJ, OPAKUJ, KONEC, AZ, ZVOLIT, PRIPAD, PRIPAD, JINAK, KONEC, KONEC);
 
 void helpprik1()
 {
-	char *s = formatStr(lng(521, "\
-															   Basic commands:\n\
-																 %; %; %; %; %; %\n\
-																 % character\n\
-																 % milisec; %; %; %; %\n\
-																 \n\
-																   Operators:\n\
-																	 %, %,  +, -,  *, /, %%,  %,  %\n\
-																	 \n\
-																	   Conditions:\n\
-																		 %, %, %, %, %, %, %\n\
-																		 \n\
-																		   Functions:\n\
-																			 %, %, %(n), %(array)\
-																			 "), KROK, VLEVO_VBOK, VPRAVO_VBOK, ZVEDNI, POLOZ, DOMU,
+	char *s = formatStr(lng(521,
+ "  Basic commands:\n"
+ "%; %; %; %; %; %\n"
+ "% character\n"
+ "% milisec; %; %; %; %\n"
+ "\n"
+ "  Operators:\n"
+ "%, %,  +, -,  *, /, %%,  %,  %\n"
+ "\n"
+ "  Conditions:\n"
+ "%, %, %, %, %, %, %\n"
+ "\n"
+ "  Functions:\n"
+ "%, %, %(n), %(array)"
+ ), KROK, VLEVO_VBOK, VPRAVO_VBOK, ZVEDNI, POLOZ, DOMU,
 	 MALUJ, CEKEJ, STOP, NAVRAT, RYCHLE, POMALU,
 	 JE, NENI, A, NEBO, ZED, ZNACKA, MISTO, SEVER, JIH, VYCHOD, ZAPAD,
 	 ZNAK, KLAVESA, NAHODA, DELKA);

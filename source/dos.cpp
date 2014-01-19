@@ -239,75 +239,75 @@ Tmenu mainmenu1[]={
 {"F&ield",Mplocha1,0,0},
 {"&Help",Mnapoveda1,0,0},{0,0,0,0}};
 
-Tmainmenu *menu,*menus[2];
+Tmainmenu *menu, *menus[2];
 
 Tmenuitem *Mplochy=0; //pointer to Field menu item
 
 
-char *gsmer0[]={"nahoru","dol…"},*god0[]={"od kurzoru","v cel‚m textu"},
-     *gmak0[]={"velkìmi p¡smeny","malìmi p¡smeny","nenahrazovat"};
+char *gsmer0[]={"nahoru", "dol…"}, *god0[]={"od kurzoru", "v cel‚m textu"},
+*gmak0[]={"velkìmi p¡smeny", "malìmi p¡smeny", "nenahrazovat"};
 
-char *gsmer1[]={"Backward","Forward"},*god1[]={"From cursor","Entire scope"},
-     *gmak1[]={"Upper case","Lower case","Disable"};
+char *gsmer1[]={"Backward", "Forward"}, *god1[]={"From cursor", "Entire scope"},
+*gmak1[]={"Upper case", "Lower case", "Disable"};
 
 Tcomponent *Csfind0[]=
 {
- new Teditn(1,1,33,"   &Naj¡t:",ffind,sizeof(ffind),false),
- new Teditn(1,3,33,"Na&hradit:",freplace,sizeof(freplace),false),
- new Tcheckbox(1,5,30,"&Jen cel‚ slovo",fword),
- new Tcheckbox(1,6,30,"&Rozliçovat mal  a velk ",fcase),
- new Tgroup(1,8,20,"&SmØr",fsmer,gsmer0,2),
- new Tgroup(25,8,20,"&Od",fod,god0,2),
- new Tbutton(3,12,"  O&K  ",1),
- new Tbutton(16,12,"Storno",0),
- new Tbutton(29,12,"Nahradit &vçe",3)
+	new Teditn(1, 1, 33, "   &Naj¡t:", ffind, sizeof(ffind), false),
+	new Teditn(1, 3, 33, "Na&hradit:", freplace, sizeof(freplace), false),
+	new Tcheckbox(1, 5, 30, "&Jen cel‚ slovo", fword),
+	new Tcheckbox(1, 6, 30, "&Rozliçovat mal  a velk ", fcase),
+	new Tgroup(1, 8, 20, "&SmØr", fsmer, gsmer0, 2),
+	new Tgroup(25, 8, 20, "&Od", fod, god0, 2),
+	new Tbutton(3, 12, "  O&K  ", 1),
+	new Tbutton(16, 12, "Storno", 0),
+	new Tbutton(29, 12, "Nahradit &vçe", 3)
 }
-,*Cfind0=Csfind0[0],*Crepl0=Csfind0[1];
+, *Cfind0=Csfind0[0], *Crepl0=Csfind0[1];
 
 Tcomponent *Csfind1[]=
 {
- new Teditn(1,1,29,"&Text to Find:",ffind,sizeof(ffind),false),
- new Teditn(1,3,29,"    &New Text:",freplace,sizeof(freplace),false),
- new Tcheckbox(1,5,23,"&Whole words only",fword),
- new Tcheckbox(1,6,23,"&Case-sensitive",fcase),
- new Tgroup(1,8,19,"&Direction",fsmer,gsmer1,2),
- new Tgroup(25,8,19,"O&rigin",fod,god1,2),
- new Tbutton(3,12,"  &OK  ",1),
- new Tbutton(16,12,"Cancel",0),
- new Tbutton(29,12,"Change &All",3)
+	new Teditn(1, 1, 29, "&Text to Find:", ffind, sizeof(ffind), false),
+	new Teditn(1, 3, 29, "    &New Text:", freplace, sizeof(freplace), false),
+	new Tcheckbox(1, 5, 23, "&Whole words only", fword),
+	new Tcheckbox(1, 6, 23, "&Case-sensitive", fcase),
+	new Tgroup(1, 8, 19, "&Direction", fsmer, gsmer1, 2),
+	new Tgroup(25, 8, 19, "O&rigin", fod, god1, 2),
+	new Tbutton(3, 12, "  &OK  ", 1),
+	new Tbutton(16, 12, "Cancel", 0),
+	new Tbutton(29, 12, "Change &All", 3)
 }
-,*Cfind1=Csfind1[0],*Crepl1=Csfind1[1];
+, *Cfind1=Csfind1[0], *Crepl1=Csfind1[1];
 
 Tcomponent *Ccfg0[]=
 {
- new Tcheckbox(1,1,36,"&Trval‚ bloky",persistblok),
- new Tcheckbox(1,2,36,"&Pýepisovat bloky",overwrblok),
- new Tcheckbox(1,3,36,"&Odsazov n¡ po ENTER",indent),
- new Tcheckbox(1,4,36,"O&dsazov n¡ pýi Backspace",unindent),
- new Tcheckbox(1,5,36,"&Hledat slovo pod kurzorem",foncur),
- new Tcheckbox(1,6,36,"&Vlo§en¡ ý dku posune kurzor",entern),
- new Tcheckbox(1,7,36,"&ZpØt je po skupin ch",groupUndo),
- new Tcheckbox(1,8,36,"Po &ulo§en¡ lze d t zpØt",undoSave),
- new Tcheckbox(1,9,36,"Kl¡Ÿov  slova velkìmi p¡sme&ny",upcasekeys),
- new Teditn(1,11,5,"T&abul tory:",tabsed,sizeof(tabsed),false),
- new Tbutton(5,13,"  O&K  ",1),
- new Tbutton(20,13,"Storno",0)
+	new Tcheckbox(1, 1, 36, "&Trval‚ bloky", persistblok),
+	new Tcheckbox(1, 2, 36, "&Pýepisovat bloky", overwrblok),
+	new Tcheckbox(1, 3, 36, "&Odsazov n¡ po ENTER", indent),
+	new Tcheckbox(1, 4, 36, "O&dsazov n¡ pýi Backspace", unindent),
+	new Tcheckbox(1, 5, 36, "&Hledat slovo pod kurzorem", foncur),
+	new Tcheckbox(1, 6, 36, "&Vlo§en¡ ý dku posune kurzor", entern),
+	new Tcheckbox(1, 7, 36, "&ZpØt je po skupin ch", groupUndo),
+	new Tcheckbox(1, 8, 36, "Po &ulo§en¡ lze d t zpØt", undoSave),
+	new Tcheckbox(1, 9, 36, "Kl¡Ÿov  slova velkìmi p¡sme&ny", upcasekeys),
+	new Teditn(1, 11, 5, "T&abul tory:", tabsed, sizeof(tabsed), false),
+	new Tbutton(5, 13, "  O&K  ", 1),
+	new Tbutton(20, 13, "Storno", 0)
 };
 
 Tcomponent *Ccfg1[]=
 {
- new Tcheckbox(1,1,33,"&Persistent blocks",persistblok),
- new Tcheckbox(1,2,33,"&Overwrite blocks",overwrblok),
- new Tcheckbox(1,3,33,"&Autoindent mode",indent),
- new Tcheckbox(1,4,33,"&Backspace unindent",unindent),
- new Tcheckbox(1,5,33,"&Find text at cursor",foncur),
- new Tcheckbox(1,6,33,"&Insert line moves cursor up",entern),
- new Tcheckbox(1,7,33,"&Group undo",groupUndo),
- new Tcheckbox(1,8,33,"&Undo after save",undoSave),
- new Tcheckbox(1,9,33,"Capital letters in key&words",upcasekeys),
- new Teditn(1,11,5,"&Tab size:",tabsed,sizeof(tabsed),false),
- new Tbutton(5,13,"  O&K  ",1),
- new Tbutton(20,13,"Cancel",0)
+	new Tcheckbox(1, 1, 33, "&Persistent blocks", persistblok),
+	new Tcheckbox(1, 2, 33, "&Overwrite blocks", overwrblok),
+	new Tcheckbox(1, 3, 33, "&Autoindent mode", indent),
+	new Tcheckbox(1, 4, 33, "&Backspace unindent", unindent),
+	new Tcheckbox(1, 5, 33, "&Find text at cursor", foncur),
+	new Tcheckbox(1, 6, 33, "&Insert line moves cursor up", entern),
+	new Tcheckbox(1, 7, 33, "&Group undo", groupUndo),
+	new Tcheckbox(1, 8, 33, "&Undo after save", undoSave),
+	new Tcheckbox(1, 9, 33, "Capital letters in key&words", upcasekeys),
+	new Teditn(1, 11, 5, "&Tab size:", tabsed, sizeof(tabsed), false),
+	new Tbutton(5, 13, "  O&K  ", 1),
+	new Tbutton(20, 13, "Cancel", 0)
 };
 //---------------------------------------------------------------------------
 
@@ -590,10 +590,10 @@ void moznosti()
 void oprogramu()
 {
 	oknotxt(lng(38, "About"),
-	lng("          KAREL\n        Verze 4.0\n\n 1999-2007 Petr LaçtoviŸka\n\
-			 \nTento program je freeware.",
-	"          KAREL\n        Version 4.0\n\n1999-2007  Petr Lastovicka\n\
-	 \n This program is freeware."), 31, 12);
+	lng("          KAREL\n        Verze 4.0\n\n 1999-2007 Petr LaçtoviŸka\n"
+	 " \nTento program je freeware.",
+	 "          KAREL\n        Version 4.0\n\n1999-2007  Petr Lastovicka\n"
+	 " \n This program is freeware."), 31, 12);
 }
 
 void textColor(int cl)
