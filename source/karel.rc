@@ -1,0 +1,666 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winresrc.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Czech resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CSY)
+#ifdef _WIN32
+LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+1                       ICON    DISCARDABLE     "karel.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+10                      BITMAP  MOVEABLE PURE   "toolbar.bmp"
+KA                      BITMAP  MOVEABLE PURE   "ka.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+ACC ACCELERATORS MOVEABLE PURE 
+BEGIN
+    "+",            104,                    ASCII,  ALT, NOINVERT
+    "-",            103,                    ASCII,  ALT, NOINVERT
+    "0",            1050,                   VIRTKEY, CONTROL, NOINVERT
+    "0",            9900,                   VIRTKEY, ALT, NOINVERT
+    "0",            1060,                   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "1",            1051,                   VIRTKEY, CONTROL, NOINVERT
+    "1",            9901,                   VIRTKEY, ALT, NOINVERT
+    "1",            1061,                   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "2",            1052,                   VIRTKEY, CONTROL, NOINVERT
+    "2",            9902,                   VIRTKEY, ALT, NOINVERT
+    "2",            1062,                   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "3",            1053,                   VIRTKEY, CONTROL, NOINVERT
+    "3",            9903,                   VIRTKEY, ALT, NOINVERT
+    "3",            1063,                   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "4",            1054,                   VIRTKEY, CONTROL, NOINVERT
+    "4",            9904,                   VIRTKEY, ALT, NOINVERT
+    "4",            1064,                   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "5",            1055,                   VIRTKEY, CONTROL, NOINVERT
+    "5",            9905,                   VIRTKEY, ALT, NOINVERT
+    "5",            1065,                   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "6",            1056,                   VIRTKEY, CONTROL, NOINVERT
+    "6",            9906,                   VIRTKEY, ALT, NOINVERT
+    "6",            1066,                   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "7",            1057,                   VIRTKEY, CONTROL, NOINVERT
+    "7",            9907,                   VIRTKEY, ALT, NOINVERT
+    "7",            1067,                   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "8",            1058,                   VIRTKEY, CONTROL, NOINVERT
+    "8",            9908,                   VIRTKEY, ALT, NOINVERT
+    "8",            1068,                   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "9",            1059,                   VIRTKEY, CONTROL, NOINVERT
+    "9",            9909,                   VIRTKEY, ALT, NOINVERT
+    "9",            1069,                   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "O",            122,                    VIRTKEY, ALT, NOINVERT
+    VK_BACK,        1017,                   VIRTKEY, NOINVERT
+    VK_BACK,        1020,                   VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      1018,                   VIRTKEY, NOINVERT
+    VK_DELETE,      1073,                   VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      1086,                   VIRTKEY, SHIFT, NOINVERT
+    VK_DOWN,        1003,                   VIRTKEY, NOINVERT
+    VK_DOWN,        1007,                   VIRTKEY, CONTROL, NOINVERT
+    VK_DOWN,        1024,                   VIRTKEY, SHIFT, NOINVERT
+    VK_END,         1009,                   VIRTKEY, NOINVERT
+    VK_END,         1013,                   VIRTKEY, CONTROL, NOINVERT
+    VK_END,         1028,                   VIRTKEY, SHIFT, NOINVERT
+    VK_END,         1032,                   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_ESCAPE,      106,                    VIRTKEY, NOINVERT
+    VK_F1,          123,                    VIRTKEY, NOINVERT
+    VK_F1,          124,                    VIRTKEY, SHIFT, NOINVERT
+    VK_F11,         515,                    VIRTKEY, NOINVERT
+    VK_F12,         502,                    VIRTKEY, NOINVERT
+    VK_F2,          506,                    VIRTKEY, CONTROL, NOINVERT
+    VK_F3,          1077,                   VIRTKEY, NOINVERT
+    VK_F3,          1078,                   VIRTKEY, SHIFT, NOINVERT
+    VK_F4,          512,                    VIRTKEY, NOINVERT
+    VK_F4,          511,                    VIRTKEY, SHIFT, NOINVERT
+    VK_F5,          108,                    VIRTKEY, NOINVERT
+    VK_F5,          107,                    VIRTKEY, CONTROL, NOINVERT
+    VK_F5,          110,                    VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          501,                    VIRTKEY, NOINVERT
+    VK_F6,          503,                    VIRTKEY, CONTROL, NOINVERT
+    VK_F7,          508,                    VIRTKEY, NOINVERT
+    VK_F7,          510,                    VIRTKEY, SHIFT, NOINVERT
+    VK_F8,          507,                    VIRTKEY, NOINVERT
+    VK_F8,          513,                    VIRTKEY, CONTROL, NOINVERT
+    VK_F8,          509,                    VIRTKEY, SHIFT, NOINVERT
+    VK_F9,          500,                    VIRTKEY, NOINVERT
+    VK_F9,          505,                    VIRTKEY, ALT, NOINVERT
+    VK_HOME,        1008,                   VIRTKEY, NOINVERT
+    VK_HOME,        1012,                   VIRTKEY, CONTROL, NOINVERT
+    VK_HOME,        105,                    VIRTKEY, ALT, NOINVERT
+    VK_HOME,        1027,                   VIRTKEY, SHIFT, NOINVERT
+    VK_HOME,        1031,                   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_INSERT,      1019,                   VIRTKEY, NOINVERT
+    VK_INSERT,      1085,                   VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      1087,                   VIRTKEY, SHIFT, NOINVERT
+    VK_LEFT,        1000,                   VIRTKEY, NOINVERT
+    VK_LEFT,        1004,                   VIRTKEY, CONTROL, NOINVERT
+    VK_LEFT,        102,                    VIRTKEY, ALT, NOINVERT
+    VK_LEFT,        1021,                   VIRTKEY, SHIFT, NOINVERT
+    VK_LEFT,        1025,                   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_NEXT,        1011,                   VIRTKEY, NOINVERT
+    VK_NEXT,        1015,                   VIRTKEY, CONTROL, NOINVERT
+    VK_NEXT,        1030,                   VIRTKEY, SHIFT, NOINVERT
+    VK_NEXT,        1034,                   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_PRIOR,       1010,                   VIRTKEY, NOINVERT
+    VK_PRIOR,       1014,                   VIRTKEY, CONTROL, NOINVERT
+    VK_PRIOR,       1029,                   VIRTKEY, SHIFT, NOINVERT
+    VK_PRIOR,       1033,                   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_RETURN,      1016,                   VIRTKEY, NOINVERT
+    VK_RETURN,      1070,                   VIRTKEY, CONTROL, NOINVERT
+    VK_RETURN,      1084,                   VIRTKEY, SHIFT, NOINVERT
+    VK_RIGHT,       1001,                   VIRTKEY, NOINVERT
+    VK_RIGHT,       1005,                   VIRTKEY, CONTROL, NOINVERT
+    VK_RIGHT,       101,                    VIRTKEY, ALT, NOINVERT
+    VK_RIGHT,       1022,                   VIRTKEY, SHIFT, NOINVERT
+    VK_RIGHT,       1026,                   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_TAB,         1040,                   VIRTKEY, NOINVERT
+    VK_UP,          1002,                   VIRTKEY, NOINVERT
+    VK_UP,          1006,                   VIRTKEY, CONTROL, NOINVERT
+    VK_UP,          100,                    VIRTKEY, ALT, NOINVERT
+    VK_UP,          1023,                   VIRTKEY, SHIFT, NOINVERT
+    "Y",            1049,                   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "Z",            1039,                   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "^A",           1043,                   ASCII,  NOINVERT
+    "^C",           1035,                   ASCII,  NOINVERT
+    "^F",           516,                    ASCII,  NOINVERT
+    "^G",           1079,                   ASCII,  NOINVERT
+    "\t",           1044,                   ASCII,  NOINVERT
+    "^K",           1076,                   ASCII,  NOINVERT
+    "^M",           1041,                   ASCII,  NOINVERT
+    "^N",           1046,                   ASCII,  NOINVERT
+    "^O",           1081,                   ASCII,  NOINVERT
+    "^P",           1074,                   ASCII,  NOINVERT
+    "^Q",           1075,                   ASCII,  NOINVERT
+    "^R",           517,                    ASCII,  NOINVERT
+    "^S",           1082,                   ASCII,  NOINVERT
+    "^T",           1047,                   ASCII,  NOINVERT
+    "^U",           1045,                   ASCII,  NOINVERT
+    "^V",           1037,                   ASCII,  NOINVERT
+    "^X",           1036,                   ASCII,  NOINVERT
+    "^Y",           1048,                   ASCII,  NOINVERT
+    "^Z",           1038,                   ASCII,  NOINVERT
+END
+
+ACCFLD ACCELERATORS MOVEABLE PURE 
+BEGIN
+    VK_DELETE,      109,                    VIRTKEY, CONTROL, NOINVERT
+    VK_DOWN,        1510,                   VIRTKEY, CONTROL, NOINVERT
+    VK_END,         1501,                   VIRTKEY, CONTROL, NOINVERT
+    VK_F4,          1504,                   VIRTKEY, NOINVERT
+    VK_F7,          1505,                   VIRTKEY, NOINVERT
+    VK_F8,          1506,                   VIRTKEY, NOINVERT
+    VK_HOME,        1500,                   VIRTKEY, CONTROL, NOINVERT
+    VK_LEFT,        1507,                   VIRTKEY, CONTROL, NOINVERT
+    VK_NEXT,        1503,                   VIRTKEY, CONTROL, NOINVERT
+    VK_PRIOR,       1502,                   VIRTKEY, CONTROL, NOINVERT
+    VK_RIGHT,       1508,                   VIRTKEY, CONTROL, NOINVERT
+    VK_UP,          1509,                   VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+KEYS DIALOG DISCARDABLE  0, 0, 234, 54
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Keyboard accelerators"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Key:",320,7,33,51,8
+    EDITTEXT        99,61,30,144,14,ES_AUTOHSCROLL
+    LTEXT           "Command:",321,7,9,51,8
+    EDITTEXT        98,61,7,144,14,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_TABSTOP
+    PUSHBUTTON      ". . .",111,208,7,19,14
+END
+
+ABOUT DIALOGEX 52, 18, 113, 104
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 11, "MS Sans Serif"
+BEGIN
+    CTEXT           "(C) 1999-2007  Petr Lastovicka",311,4,50,105,10
+    RTEXT           "Version",312,30,25,30,9
+    CTEXT           "KAREL",-1,36,6,40,9
+    ICON            1,-1,15,20,20,20
+    PUSHBUTTON      "",IDOK,40,84,32,14
+    ICON            1,-1,85,20,20,20
+    PUSHBUTTON      "http://petr.lastovicka.sweb.cz",123,7,64,98,11
+    LTEXT           " ",101,65,25,15,8
+END
+
+OPTIONS DIALOGEX 20, 21, 167, 223
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Options"
+FONT 9, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Persistent blocks",300,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,10,157,12
+    CONTROL         "&Overwrite blocks",301,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,25,157,12
+    CONTROL         "&Autoindent mode",302,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,40,157,12
+    CONTROL         "&Backspace unindent",303,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,55,157,12
+    CONTROL         "&Find text at cursor",304,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,70,157,12
+    CONTROL         "&Insert line moves cursor up",305,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,85,157,12
+    CONTROL         "&Group undo",306,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    10,100,157,12
+    CONTROL         "&Undo after save",307,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,115,157,12
+    CONTROL         "Capital letters in key&words",308,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,130,157,12
+    CONTROL         "&Draw marks as horizontal lines",309,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,145,157,12
+    CTEXT           "&Tab size:",310,1,166,65,8
+    EDITTEXT        101,70,164,25,12,ES_NUMBER
+    CTEXT           "&Syntax languages:",313,0,183,66,8
+    EDITTEXT        102,70,181,80,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "",IDOK,29,200,37,15
+    PUSHBUTTON      "",IDCANCEL,89,200,37,15
+END
+
+INT DIALOG DISCARDABLE  18, 18, 138, 56
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 9, "MS Sans Serif"
+BEGIN
+    CTEXT           "",102,10,10,68,8
+    EDITTEXT        101,92,8,32,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "",IDOK,24,32,31,14
+    PUSHBUTTON      "",IDCANCEL,80,32,29,14
+END
+
+FIND DIALOGEX 18, 18, 187, 158
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 9, "MS Sans Serif"
+BEGIN
+    EDITTEXT        101,60,9,119,12,ES_AUTOHSCROLL
+    RTEXT           "Text to Find:",322,3,10,54,8
+    RTEXT           "New Text:",323,3,35,54,8
+    EDITTEXT        102,60,33,119,12,ES_AUTOHSCROLL
+    CONTROL         "&Whole words only",324,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,55,162,12
+    CONTROL         "&Case-sensitive",325,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,70,162,12
+    GROUPBOX        "Direction",326,10,85,82,40,WS_GROUP
+    CONTROL         "&Backward",327,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,
+                    15,96,72,12
+    CONTROL         "Forwar&d",328,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,
+                    15,111,72,12
+    GROUPBOX        "Origin",329,95,85,82,40,WS_GROUP
+    CONTROL         "&From cursor",330,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,100,95,72,12
+    CONTROL         "&Entire scope",331,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,100,110,72,12
+    DEFPUSHBUTTON   "",IDOK,15,135,40,14,WS_GROUP
+    PUSHBUTTON      "",IDCANCEL,68,135,40,14
+    PUSHBUTTON      "Replace &All",332,122,135,56,14
+END
+
+COLOR DIALOG DISCARDABLE  0, 0, 208, 158
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Colors"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,42,134,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,116,134,50,14
+    RTEXT           "Mark",333,6,9,43,8
+    RTEXT           "Wall",334,7,29,42,8
+    RTEXT           "Char.",335,7,49,42,8
+    RTEXT           "Indentifier",336,102,9,58,8
+    RTEXT           "Keyword",337,98,29,62,8
+    RTEXT           "Comment",338,105,49,55,8
+    RTEXT           "Number",339,114,69,46,8
+    RTEXT           "Breakpoint",340,7,84,78,8
+    RTEXT           "Execution line",341,7,104,78,8
+    CONTROL         "",115,"Button",BS_OWNERDRAW | WS_TABSTOP,58,7,14,14
+    CONTROL         "",117,"Button",BS_OWNERDRAW | WS_TABSTOP,58,27,14,14
+    CONTROL         "",116,"Button",BS_OWNERDRAW | WS_TABSTOP,58,47,14,14
+    CONTROL         "",101,"Button",BS_OWNERDRAW | WS_TABSTOP,170,7,14,14
+    CONTROL         "",102,"Button",BS_OWNERDRAW | WS_TABSTOP,170,27,14,14
+    CONTROL         "",105,"Button",BS_OWNERDRAW | WS_TABSTOP,170,47,14,14
+    CONTROL         "",104,"Button",BS_OWNERDRAW | WS_TABSTOP,170,67,14,14
+    CONTROL         "",106,"Button",BS_OWNERDRAW | WS_TABSTOP,95,82,14,14
+    CONTROL         "",107,"Button",BS_OWNERDRAW | WS_TABSTOP,95,102,14,14
+    CONTROL         "",206,"Button",BS_OWNERDRAW | WS_TABSTOP,113,82,14,14
+    CONTROL         "",207,"Button",BS_OWNERDRAW | WS_TABSTOP,113,102,14,14
+    CONTROL         "",215,"Button",BS_OWNERDRAW | WS_TABSTOP,76,7,14,14
+    CONTROL         "",217,"Button",BS_OWNERDRAW | WS_TABSTOP,76,27,14,14
+    CONTROL         "",216,"Button",BS_OWNERDRAW | WS_TABSTOP,76,47,14,14
+    CONTROL         "",201,"Button",BS_OWNERDRAW | WS_TABSTOP,188,7,14,14
+    CONTROL         "",202,"Button",BS_OWNERDRAW | WS_TABSTOP,188,27,14,14
+    CONTROL         "",205,"Button",BS_OWNERDRAW | WS_TABSTOP,188,47,14,14
+    CONTROL         "",204,"Button",BS_OWNERDRAW | WS_TABSTOP,188,67,14,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+MENU_EN MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New",                        1080
+        MENUITEM "&Open...",                    1081
+        MENUITEM "&Save",                       1082
+        MENUITEM "S&ave as...",                 1083
+        MENUITEM SEPARATOR
+        MENUITEM "&Colors...",                  128
+        MENUITEM "Change &keys...",             127
+        POPUP "Language"
+        BEGIN
+            MENUITEM ".",                           29999
+        END
+        MENUITEM "Clear settings",              118
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       120
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo",                       1038
+        MENUITEM "&Redo",                       1039
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t",                        1036
+        MENUITEM "&Copy",                       1035
+        MENUITEM "&Paste",                      1037
+        MENUITEM SEPARATOR
+        POPUP "&Editor"
+        BEGIN
+            POPUP "&Delete"
+            BEGIN
+                MENUITEM "Line",                        1048
+                MENUITEM "End of line",                 1049
+                MENUITEM "Word",                        1047
+                MENUITEM "Last word",                   1020
+                MENUITEM "Selected block",              1073
+            END
+            POPUP "&Insert"
+            BEGIN
+                MENUITEM "New line",                    1046
+                MENUITEM "Command END",                 1084
+            END
+            POPUP "&Go to"
+            BEGIN
+                MENUITEM "Next line",                   1070
+                MENUITEM "Next word",                   1005
+                MENUITEM "Previous word",               1004
+                MENUITEM SEPARATOR
+                MENUITEM "Page top",                    1014
+                MENUITEM "Page bottom",                 1015
+                MENUITEM "Beginning of text",           1012
+                MENUITEM "End of text",                 1013
+                MENUITEM SEPARATOR
+                MENUITEM "Scroll up",                   1006
+                MENUITEM "Scroll down",                 1007
+            END
+            POPUP "&Select"
+            BEGIN
+                MENUITEM "All",                         1043
+                MENUITEM "Next word",                   1026
+                MENUITEM "Previous word",               1025
+                MENUITEM SEPARATOR
+                MENUITEM "To page top",                 1033
+                MENUITEM "To page bottom",              1034
+                MENUITEM "To beginning of text",        1031
+                MENUITEM "To end of text",              1032
+            END
+            POPUP "&Block"
+            BEGIN
+                MENUITEM "Cut",                         1086
+                MENUITEM "Copy",                        1085
+                MENUITEM "Paste",                       1087
+                MENUITEM SEPARATOR
+                MENUITEM "Indent",                      1044
+                MENUITEM "Unindent",                    1045
+                MENUITEM "Upper/lower case",            1041
+            END
+        END
+        MENUITEM "&Options...",                 122
+    END
+    POPUP "&Search"
+    BEGIN
+        MENUITEM "&Find...",                    516
+        MENUITEM "&Replace...",                 517
+        MENUITEM "Find &next",                  1077
+        MENUITEM "Find previo&us",              1078
+        MENUITEM SEPARATOR
+        MENUITEM "&Go to line...",              1079
+        MENUITEM "Show &execution point",       514
+        MENUITEM SEPARATOR
+        MENUITEM "Find &procedure...",          515
+    END
+    POPUP "&Run"
+    BEGIN
+        MENUITEM "&Run",                        500
+        MENUITEM "&Trace",                      501
+        MENUITEM "Run &procedure...",           502
+        MENUITEM SEPARATOR
+        MENUITEM "&Compile",                    505
+        MENUITEM "Spee&d...",                   503
+        MENUITEM "&Stack size...",              504
+        MENUITEM "Program r&eset",              506
+    END
+    POPUP "&Debug"
+    BEGIN
+        MENUITEM "&Step over",                  507
+        MENUITEM "&Trace into",                 508
+        MENUITEM "&Visible step",               509
+        MENUITEM "One &instruction",            510
+        MENUITEM "&Finish procedure",           511
+        MENUITEM "Run to c&ursor",              512
+        MENUITEM SEPARATOR
+        MENUITEM "&Breakpoint",                 513
+        MENUITEM "&Clear breakpoints",          121
+    END
+    POPUP "&Karel"
+    BEGIN
+        MENUITEM "&Step",                       100
+        MENUITEM "&Right",                      101
+        MENUITEM "&Left",                       102
+        MENUITEM "&Pick up",                    103
+        MENUITEM "Put &down",                   104
+        MENUITEM "&Home",                       105
+    END
+    POPUP "F&ield"
+    BEGIN
+        MENUITEM "&Modify...",                  107
+        MENUITEM "Res&tore",                    108
+        MENUITEM "Cl&ear",                      109
+        MENUITEM "&Generate",                   110
+        MENUITEM SEPARATOR
+        MENUITEM "&New",                        111
+        MENUITEM "&Open...",                    112
+        MENUITEM "&Save",                       113
+        MENUITEM "S&ave as...",                 114
+        MENUITEM "&Rename",                     115
+        MENUITEM "&Close",                      116
+        MENUITEM SEPARATOR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Dokumentace",                60000
+        MENUITEM "&Basic commands",             123
+        MENUITEM "&Program structure",          124
+        MENUITEM SEPARATOR
+        MENUITEM "&About...",                   119
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#include ""winresrc.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 4,2,0,0
+ PRODUCTVERSION 0,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040504b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", " \0"
+            VALUE "FileDescription", "Robot Karel\0"
+            VALUE "FileVersion", "4, 2, 1, 0\0"
+            VALUE "InternalName", "karel\0"
+            VALUE "LegalCopyright", "© 1999-2014 Petr Laštovièka\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "karel.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "\0"
+            VALUE "ProductVersion", "0, 0, 0, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x405, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO MOVEABLE PURE 
+BEGIN
+    "OPTIONS", DIALOG
+    BEGIN
+        RIGHTMARGIN, 160
+        BOTTOMMARGIN, 217
+    END
+
+    "FIND", DIALOG
+    BEGIN
+        RIGHTMARGIN, 183
+        BOTTOMMARGIN, 157
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    2081                    "Open"
+    2082                    "Save"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    1505                    "Compile and show information"
+    1506                    "Stop"
+    1507                    "Step over"
+    1508                    "Step into"
+    1511                    "Finish procedure"
+    1513                    "Breakpoint"
+    1515                    "Find procedure"
+    1516                    "Find text"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    1500                    "Run"
+    1501                    "Trace"
+    1502                    "Find and run procedure"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    2035                    "Copy"
+    2036                    "Cut"
+    2037                    "Paste"
+    2038                    "Undo"
+    2039                    "Redo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    1100                    "Step"
+    1101                    "Right"
+    1102                    "Left"
+    1103                    "Pick up a mark"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    1104                    "Put down a mark"
+    1105                    "Go to bottom left corner"
+    1106                    "Pause"
+END
+
+#endif    // Czech resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
