@@ -291,14 +291,17 @@ void initLang()
 {
 	scanLangDir();
 	if(!lang[0]){
-		//language autodetection
-		strcpy(lang, "English");
-		WORD id= (WORD)(PRIMARYLANGID(GetUserDefaultLangID()));
-		if(id==0x05) strcpy(lang, "Czech");
-		if(id==0x0c) strcpy(lang, "French");
-		//TODO: more languages
+		//language detection
+		const char* s;
+		switch(PRIMARYLANGID(GetUserDefaultLangID()))
+		{
+			case LANG_CATALAN: s="Catalan"; break;
+			case LANG_CZECH: s="Czech"; break;
+			case LANG_FRENCH: s="French"; break;
+			default: s="English"; break;
+		}
+		strcpy(lang, s);
 	}
 	loadLang();
 }
 //---------------------------------------------------------------------------
-
