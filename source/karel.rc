@@ -225,7 +225,7 @@ END
 ABOUT DIALOGEX 52, 18, 113, 104
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "About"
-FONT 11, "MS Sans Serif"
+FONT 11, "MS Shell Dlg"
 BEGIN
     CTEXT           "(C) 1999-2007  Petr Lastovicka",311,4,50,105,10
     RTEXT           "Version",312,30,25,30,9
