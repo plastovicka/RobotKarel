@@ -533,7 +533,7 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 4,2,0,0
+ FILEVERSION 4,2,0,1
  PRODUCTVERSION 0,0,0,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
@@ -554,7 +554,7 @@ BEGIN
             VALUE "FileDescription", "Robot Karel\0"
             VALUE "FileVersion", "4, 2, 1, 0\0"
             VALUE "InternalName", "karel\0"
-            VALUE "LegalCopyright", "© 1999-2014 Petr Laštovièka\0"
+            VALUE "LegalCopyright", "© 1999-2015 Petr Laštovièka\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "karel.exe\0"
             VALUE "PrivateBuild", "\0"
