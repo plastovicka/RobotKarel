@@ -1619,6 +1619,12 @@ int pascal WinMain(HINSTANCE hInstance, HINSTANCE hPrevInst, LPSTR param, int cm
 	};
 
 	inst=hInstance;
+
+	//DPIAware
+	typedef BOOL(WINAPI *TGetProcAddress)();
+	TGetProcAddress getProcAddress = (TGetProcAddress) GetProcAddress(GetModuleHandle("user32"), "SetProcessDPIAware");
+	if(getProcAddress) getProcAddress();
+
 #if _WIN32_IE >= 0x0300
 	INITCOMMONCONTROLSEX iccs;
 	iccs.dwSize= sizeof(INITCOMMONCONTROLSEX);
