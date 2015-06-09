@@ -46,22 +46,22 @@ void Ttext::setRect(int x1, int y1)
 }
 
 /*
- delete del bytes, then allocate ins bytes
+ delete delLen bytes, then allocate insLen bytes
  dr is line count difference
  return false if error
  */
-bool Ttext::zmena(size_t del, size_t ins, int dr)
+bool Ttext::zmena(size_t delLen, size_t insLen, int dr)
 {
 	Tundo *u=0;
 	char *s;
 	int g=0;
 
-	if(del==0 && ins==0) return false;
+	if(delLen==0 && insLen==0) return false;
 	delpreklad(); //delete compiled code when source is modified
 
 	if(undoCur && groupUndo && !dr){
-		if(ins==0 && undoCur->ins==0){
-			if(del==1 && unsigned(cur.u-txt.u) == undoCur->offset){ //delete
+		if(insLen==0 && undoCur->ins==0){
+			if(delLen==1 && unsigned(cur.u-txt.u) == undoCur->offset){ //delete
 				//append deleted character to previous string
 				s= new char[undoCur->del+1];
 				if(s){
@@ -73,27 +73,27 @@ bool Ttext::zmena(size_t del, size_t ins, int dr)
 					g=1;
 				}
 			}
-			else if((cur.u-txt.u)+del == undoCur->offset){ //backspace
+			else if((cur.u-txt.u)+delLen == undoCur->offset){ //backspace
 				//prepend deleted character to previous string
-				s= new char[undoCur->del+del];
+				s= new char[undoCur->del+delLen];
 				if(s){
-					undoCur->offset-=del;
-					undoCur->x-=del;
-					memcpy(s+del, undoCur->str, undoCur->del);
-					memcpy(s, cur.u, del);
-					undoCur->del+=del;
+					undoCur->offset-=delLen;
+					undoCur->x-=delLen;
+					memcpy(s+delLen, undoCur->str, undoCur->del);
+					memcpy(s, cur.u, delLen);
+					undoCur->del+=delLen;
 					delete[] undoCur->str;
 					undoCur->str=s;
 					g=1;
 				}
 			}
 		}
-		else if(del==0 && ins==1 && undoCur->del==0 &&
+		else if(delLen==0 && insLen==1 && undoCur->del==0 &&
 			unsigned(cur.u-txt.u) == undoCur->offset+undoCur->ins){ //insert char
 			undoCur->ins++;
 			g=2;
 		}
-		else if(del==1 && ins==1 && undoCur->del==undoCur->ins &&
+		else if(delLen==1 && insLen==1 && undoCur->del==undoCur->ins &&
 			unsigned(cur.u-txt.u) == undoCur->offset+undoCur->ins){ //overwrite
 			//append overwritten character to previous string
 			s= new char[undoCur->del+1];
@@ -119,24 +119,24 @@ bool Ttext::zmena(size_t del, size_t ins, int dr)
 			u->offset= (size_t)(cur.u-txt.u);
 			u->r= cur.r;
 			u->x=x;
-			u->del=del;
-			u->ins=ins;
+			u->del=delLen;
+			u->ins=insLen;
 			u->dr=dr;
 			u->str=0;
 			u->pre=0;
 			//save deleted text for undo
-			if(del){
+			if(delLen){
 				do{
-					u->str= new char[del];
+					u->str= new char[delLen];
 				} while(!u->str && !freemem());
 				if(!u->str){ delete u;  u=0; }
-				else{ memcpy(u->str, cur.u, del); }
+				else{ memcpy(u->str, cur.u, delLen); }
 			}
 		}
 		jechyba--;
 	}
 
-	if(!memory((long)ins-del, dr)){
+	if(!memory((long)insLen-delLen, dr)){
 		//not enough memory
 		if(!g) delete u;
 		else if(g==2 && undoCur) undoCur->ins--;
@@ -647,7 +647,6 @@ void Ttext::smazat(char *za, int dr)
 //insert block src; length is du bytes; append m spaces
 bool Ttext::vlozit(size_t du, int dr, const char *src, int m)
 {
-	char *u;
 	int rm;
 
 	if(*cur.u==CR){ //don't put spaces after end of line
@@ -664,7 +663,7 @@ bool Ttext::vlozit(size_t du, int dr, const char *src, int m)
 		}
 		if(zmena(rm, zaCR+du+m, dr)){
 			while(zaCR){ *cur.u++=' '; zaCR--; } //insert spaces if position was after end of line
-			u=cur.u;
+			char *u=cur.u;
 			memcpy(u, src, du);
 			u+=du;
 			while(m--) *(u++)=' ';

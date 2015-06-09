@@ -249,11 +249,11 @@ char *clipboardPaste(size_t &len, bool &del);
 void statusMsg(int color, const char *s, ...);
 void cprintF(const char *s, ...);
 void printNinstr();
-int oknoint(char *name, char *text, int &var);
-void oknotxt(char *name, char *text, int w, int h);
-void oknochyb(char *text);
+int oknoint(char *name, char *label, int &var);
+void oknotxt(char *name, char *message, int w, int h);
+void oknochyb(char *message);
 int oknofile(char *name, char *ext, char *var, int action);
-int oknoano(char *name, char *text);
+int oknoano(char *name, char *message);
 
 void oprogramu();
 void moznosti();
