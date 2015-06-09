@@ -196,10 +196,10 @@ void cerrch(int ch)
 }
 
 
-int typsize(int typ)
+int typsize(int type)
 {
-	if(typ<=T_VOID) return 0;
-	if(typ>=T_ARRAY) return typ-T_ARRAY+2;
+	if(type<=T_VOID) return 0;
+	if(type>=T_ARRAY) return type-T_ARRAY+2;
 	return 1;
 }
 
@@ -1325,7 +1325,7 @@ void kompilace()
 //create procedure list
 bool mkslov(bool preloz)
 {
-	int typ;
+	int type;
 	int i, l;
 	Tslovo *slovo, **a;
 
@@ -1355,11 +1355,11 @@ bool mkslov(bool preloz)
 		do{
 			lex();
 		} while(term==O_CR);
-		if(term==PROCEDURE) typ=T_VOID;
-		else if(term==FUNKCE) typ=T_INT;
-		else if(term==PODMINKA) typ=T_BOOL1;
-		else typ=T_NO;
-		if(typ!=T_NO){
+		if(term==PROCEDURE) type=T_VOID;
+		else if(term==FUNKCE) type=T_INT;
+		else if(term==PODMINKA) type=T_BOOL1;
+		else type=T_NO;
+		if(type!=T_NO){
 			lex();
 			if(term==O_IDEN){
 				while(((slovo=new Tslovo))==0)
@@ -1376,7 +1376,7 @@ bool mkslov(bool preloz)
 
 				slovo->jmeno=keystr;
 				slovo->r=rexe;
-				slovo->result=typ;
+				slovo->result=type;
 
 				if(preloz){
 					a= &global[key % Dglobal];

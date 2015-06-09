@@ -491,7 +491,7 @@ void showScrollBar(bool show)
 	ShowScrollBar(hScroll, SB_CTL, show);
 }
 
-void eraseBkgnd(HDC dc)
+void eraseBkgnd(HDC _dc)
 {
 	HBRUSH br=CreateSolidBrush(colorsB[clnull]);
 	RECT rc;
@@ -501,29 +501,29 @@ void eraseBkgnd(HDC dc)
 	if(mode==MODE_TEXT) rc.left+=scrollW;
 	rc.right=plx;
 	rc.bottom=winHeight-charHeight;
-	FillRect(dc, &rc, br);
+	FillRect(_dc, &rc, br);
 	//bottom
 	rc.left=rc.right;
 	rc.top=ply+(plym+1)*squareHeight;
 	rc.right=winWidth;
-	FillRect(dc, &rc, br);
+	FillRect(_dc, &rc, br);
 	//right
 	rc.bottom=rc.top;
 	rc.left=plx+(plxm+1)*squareWidth;
 	rc.top=ply;
-	FillRect(dc, &rc, br);
+	FillRect(_dc, &rc, br);
 	//top
 	rc.top=Y0;
 	rc.bottom=ply;
 	rc.left=scrollX+gap;
-	FillRect(dc, &rc, br);
+	FillRect(_dc, &rc, br);
 	//below editor
 	rc.top=edBottom;
 	rc.left=0;
 	rc.right=scrollX;
 	rc.bottom=winHeight-charHeight;
 	if(mode==MODE_TEXT) rc.right+=scrollW;
-	FillRect(dc, &rc, br);
+	FillRect(_dc, &rc, br);
 	DeleteObject(br);
 }
 
@@ -667,46 +667,46 @@ void reloadMenu()
 	DrawMenuBar(hWin);
 }
 //---------------------------------------------------------------------------
-int vmsg(char *caption, char *text, int btn, va_list v)
+int vmsg(char *caption, char *formatText, int btn, va_list v)
 {
 	char buf[1024];
-	if(!text) return IDCANCEL;
-	_vsnprintf(buf, sizeof(buf), text, v);
+	if(!formatText) return IDCANCEL;
+	_vsnprintf(buf, sizeof(buf), formatText, v);
 	buf[sizeof(buf)-1]=0;
 	return MessageBox(hWin, buf, caption, btn);
 }
 
-int msg3(int btn, char *caption, char *text, ...)
+int msg3(int btn, char *caption, char *formatText, ...)
 {
 	va_list ap;
-	va_start(ap, text);
-	int result = vmsg(caption, text, btn, ap);
+	va_start(ap, formatText);
+	int result = vmsg(caption, formatText, btn, ap);
 	va_end(ap);
 	return result;
 }
 
-void msg2(char *caption, char *text, ...)
+void msg2(char *caption, char *formatText, ...)
 {
 	va_list ap;
-	va_start(ap, text);
-	vmsg(caption, text, MB_OK|MB_ICONERROR, ap);
+	va_start(ap, formatText);
+	vmsg(caption, formatText, MB_OK|MB_ICONERROR, ap);
 	va_end(ap);
 }
 
-int msg1(int btn, char *text, ...)
+int msg1(int btn, char *formatText, ...)
 {
 	va_list ap;
-	va_start(ap, text);
-	int result = vmsg(title, text, btn, ap);
+	va_start(ap, formatText);
+	int result = vmsg(title, formatText, btn, ap);
 	va_end(ap);
 	return result;
 }
 
-void msg(char *text, ...)
+void msg(char *formatText, ...)
 {
 	va_list ap;
-	va_start(ap, text);
-	vmsg(title, text, MB_OK|MB_ICONERROR, ap);
+	va_start(ap, formatText);
+	vmsg(title, formatText, MB_OK|MB_ICONERROR, ap);
 	va_end(ap);
 }
 
@@ -720,20 +720,20 @@ return d;
 }
 */
 
-void oknotxt(char *name, char *text, int /*w*/, int /*h*/)
+void oknotxt(char *name, char *message, int /*w*/, int /*h*/)
 {
-	msg3(MB_OK, name, "%s", text);
+	msg3(MB_OK, name, "%s", message);
 }
 
-void oknochyb(char *text)
+void oknochyb(char *message)
 {
-	msg("%s", text);
+	msg("%s", message);
 }
 
-int oknoano(char *name, char *text)
+int oknoano(char *name, char *message)
 {
 	int result;
-	switch(msg3(MB_YESNOCANCEL, name, "%s", text)){
+	switch(msg3(MB_YESNOCANCEL, name, "%s", message)){
 		case IDYES:
 			result=1;
 			break;
@@ -825,11 +825,11 @@ BOOL CALLBACK IntProc(HWND hWnd, UINT msg, WPARAM wP, LPARAM lP)
 	return 0;
 }
 //---------------------------------------------------------------------------
-int oknoint(char *name, char *text, int &var)
+int oknoint(char *name, char *label, int &var)
 {
 	TintDlg d;
 	d.name=name;
-	d.text=text;
+	d.text=label;
 	d.var=&var;
 	return DialogBoxParam(inst, "INT", hWin, (DLGPROC)IntProc, (LONG)&d)==IDOK;
 }
@@ -917,7 +917,7 @@ BOOL CALLBACK OptionsProc(HWND hWnd, UINT msg, WPARAM wP, LPARAM)
 BOOL CALLBACK FindProc(HWND hWnd, UINT msg, WPARAM wP, LPARAM lP)
 {
 	int repl;
-	static char *title[2]={"Find text", "Replace text"};
+	static char *windowTitle[2]={"Find text", "Replace text"};
 
 	switch(msg){
 		case WM_INITDIALOG:
@@ -929,7 +929,7 @@ BOOL CALLBACK FindProc(HWND hWnd, UINT msg, WPARAM wP, LPARAM lP)
 				DestroyWindow(GetDlgItem(hWnd, 323));
 			}
 			setDlgTexts(hWnd);
-			SetWindowText(hWnd, lng(41+lP, title[lP]));
+			SetWindowText(hWnd, lng(41+lP, windowTitle[lP]));
 			SetWindowLong(hWnd, GWL_USERDATA, (LONG)lP);
 			SetDlgItemText(hWnd, 101, ffind);
 			if(lP) SetDlgItemText(hWnd, 102, freplace);
