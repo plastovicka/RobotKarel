@@ -227,7 +227,7 @@ STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "About"
 FONT 11, "MS Shell Dlg"
 BEGIN
-    CTEXT           "(C) 1999-2015  Petr Lastovicka",311,4,50,105,10
+    CTEXT           "(C) 1999-2016  Petr Lastovicka",311,4,50,105,10
     RTEXT           "Version",312,30,25,30,9
     CTEXT           "KAREL",-1,36,6,40,9
     ICON            1,-1,15,20,20,20
@@ -533,7 +533,7 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 4,2,1,0
+ FILEVERSION 4,2,2,0
  PRODUCTVERSION 0,0,0,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
@@ -552,9 +552,9 @@ BEGIN
             VALUE "Comments", "\0"
             VALUE "CompanyName", " \0"
             VALUE "FileDescription", "Robot Karel\0"
-            VALUE "FileVersion", "4, 2, 1, 0\0"
+            VALUE "FileVersion", "4, 2, 2, 0\0"
             VALUE "InternalName", "karel\0"
-            VALUE "LegalCopyright", "© 1999-2015 Petr Laštovièka\0"
+            VALUE "LegalCopyright", "© 1999-2016 Petr Laštovièka\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "karel.exe\0"
             VALUE "PrivateBuild", "\0"
