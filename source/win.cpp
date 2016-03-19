@@ -634,8 +634,7 @@ static void addAccelToMenu(HMENU h)
 					mii.fMask=MIIM_TYPE|MFT_STRING;
 					mii.dwTypeData=buf;
 					mii.cch= sizeA(buf);
-					GetMenuItemInfo(h, i, TRUE, &mii);
-					if(mii.fType&MFT_SEPARATOR) continue;
+					if(!GetMenuItemInfo(h, i, TRUE, &mii) || (mii.fType&MFT_SEPARATOR)) continue;
 					s=strchr(buf, 0);
 					*s++='\t';
 					printKey(s, a);
