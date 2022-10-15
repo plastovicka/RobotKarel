@@ -6,4 +6,4 @@ It's a programming language for children. The robot knows commands step, left, r
 
 You can **download** released binaries (EXE file) for Windows from [sourceforge.net](https://sourceforge.net/projects/karelwin/).
 
-![Karel screenshot](http://petr.lastovicka.sweb.cz/img/karelWin.png)
+![Karel screenshot](https://plastovicka.github.io/img/karelWin.png)
