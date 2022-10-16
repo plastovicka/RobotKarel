@@ -233,7 +233,7 @@ BEGIN
     ICON            1,-1,15,20,20,20
     PUSHBUTTON      "",IDOK,40,84,32,14
     ICON            1,-1,85,20,20,20
-    PUSHBUTTON      "http://petr.lastovicka.sweb.cz",123,7,64,98,11
+    PUSHBUTTON      "https://plastovicka.github.io",123,7,64,98,11
     LTEXT           " ",101,65,25,15,8
 END
 
@@ -533,7 +533,7 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 4,2,2,0
+ FILEVERSION 4,2,2,1
  PRODUCTVERSION 0,0,0,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
@@ -552,9 +552,9 @@ BEGIN
             VALUE "Comments", "\0"
             VALUE "CompanyName", " \0"
             VALUE "FileDescription", "Robot Karel\0"
-            VALUE "FileVersion", "4, 2, 2, 0\0"
+            VALUE "FileVersion", "4, 2, 2, 1\0"
             VALUE "InternalName", "karel\0"
-            VALUE "LegalCopyright", "© 1999-2016 Petr Laštovièka\0"
+            VALUE "LegalCopyright", "© 1999-2022 Petr Laštovièka\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "karel.exe\0"
             VALUE "PrivateBuild", "\0"

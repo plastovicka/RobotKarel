@@ -433,7 +433,7 @@ void clipboardCopy(char *s, size_t n)
 	}
 	if(OpenClipboard(0)){
 		if(EmptyClipboard()){
-			if((hmem=GlobalAlloc(GMEM_DDESHARE, n+r+1))!=0){
+			if((hmem=GlobalAlloc(GMEM_MOVEABLE|GMEM_DDESHARE, n+r+1))!=0){
 				if((p=(char*)GlobalLock(hmem))!=0){
 					//convert CR to CR/LF
 					for(i=0; i<n; i++){
@@ -870,7 +870,7 @@ BOOL CALLBACK AboutProc(HWND hWnd, UINT msg, WPARAM wP, LPARAM)
 					return TRUE;
 				case 123:
 					GetDlgItemTextA(hWnd, wP, buf, sizeA(buf)-13);
-					if(strcmp(lang, "Czech")) strcat(buf, "/indexEN.html");
+					if(!strcmp(lang, "Czech")) strcat(buf, "/indexCS.html");
 					ShellExecuteA(0, 0, buf, 0, 0, SW_SHOWNORMAL);
 					break;
 			}
